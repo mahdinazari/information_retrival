@@ -7,6 +7,11 @@ import scrapy
 
 
 class PopularityAnalysisItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = scrapy.Field()
+    content = scrapy.Field()
+    url = scrapy.Field()
+    date = scrapy.Field()
+    views = scrapy.Field()
+    comments = scrapy.Field()
+    source = scrapy.Field()
+    

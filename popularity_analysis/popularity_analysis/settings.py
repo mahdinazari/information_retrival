@@ -12,12 +12,19 @@ BOT_NAME = "popularity_analysis"
 SPIDER_MODULES = ["popularity_analysis.spiders"]
 NEWSPIDER_MODULE = "popularity_analysis.spiders"
 
+# MONGO DB
+MONGO_URI = 'mongodb://root:password@localhost:37017'
+MONGO_DATABASE = 'news'
+
+ITEM_PIPELINES = {
+    'popularity_analysis.pipelines.PopularityAnalysisPipeline': 300,
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "popularity_analysis (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
